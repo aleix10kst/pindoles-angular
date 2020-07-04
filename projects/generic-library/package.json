@@ -1,0 +1,15 @@
+{
+  "name": "generic-library",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "ng build generic-library",
+    "build-watch": "ng build generic-library --watch"
+  },
+  "peerDependencies": {
+    "@angular/common": "^10.0.0",
+    "@angular/core": "^10.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

@@ -1,0 +1,3 @@
+<div *ngFor="let item of items; let idx = index">
+  <ng-container [ngTemplateOutlet]="itemTpl" [ngTemplateOutletContext]="{$implicit: item, index: idx}"></ng-container>
+</div>

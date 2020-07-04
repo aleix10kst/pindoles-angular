@@ -6,5 +6,21 @@
 */
 {
   "files": [],
-  "references": []
+  "references": [
+    {
+      "path": "./projects/generic-components/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/generic-components/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/generic-components/e2e/tsconfig.json"
+    },
+    {
+      "path": "./projects/generic-library/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/generic-library/tsconfig.spec.json"
+    }
+]
 }

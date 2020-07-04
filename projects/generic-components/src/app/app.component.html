@@ -1,0 +1,70 @@
+<div class="jumbotron">
+  <h1 class="display-4">Hello, world!</h1>
+</div>
+<div class="container">
+  <form [formGroup]="employeeForm" (ngSubmit)="onSubmitEmployee()">
+    <div class="row">
+      <div class="col-3">
+        <div class="form-group">
+          <label for="employee">Treballador</label>
+          <input type="text" class="form-control" id="employee" formControlName="name">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="employer">Empresa</label>
+          <select class="form-control custom-select" id="employer" formControlName="employer">
+            <option value="DXC">DXC</option>
+            <option value="FRIT_RAVICH">FRIT RAVICH</option>
+            <option value="SUNWEB">SUNWEB</option>
+            <option value="ALTRES">ALTRES</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn btn-outline-success float-right">Afegir</button>
+      </div>
+    </div>
+  </form>
+  <hr class="my-4">
+  <div class="row">
+    <div class="col">
+      <div>
+        <h1>DXC</h1>
+        <lib-generic-list [items]="dxcEmployees">
+          <ng-template #itemTpl let-employee let-idx="index">
+            <div class="card border-danger">
+              <div class="card-body">
+                {{ employee | json }}
+              </div>
+            </div>
+          </ng-template>
+        </lib-generic-list>
+      </div>
+      <div>
+        <h1>Frit Ravich</h1>
+        <lib-generic-list [items]="fritEmployees">
+          <ng-template #itemTpl let-employee let-idx="index">
+            <div class="card border-success">
+              <div class="card-body">
+                {{ employee | json }}
+              </div>
+            </div>
+          </ng-template>
+        </lib-generic-list>
+      </div>
+      <div>
+        <h1>Sunweb</h1>
+        <lib-generic-list [items]="sunwebEmployees">
+          <ng-template #itemTpl let-employee let-idx="index">
+            <li>
+              {{ employee | json }}
+            </li>
+          </ng-template>
+        </lib-generic-list>
+      </div>
+    </div>
+  </div>
+</div>

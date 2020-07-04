@@ -1,11 +1,11 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
+    "noImplicitAny": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -19,10 +19,16 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "generic-library": [
+        "dist/generic-library/generic-library",
+        "dist/generic-library"
+      ]
+    }
   },
   "angularCompilerOptions": {
-    "strictInjectionParameters": true,
+    "strictInjectionParameters": false,
     "strictTemplates": true
   }
 }
